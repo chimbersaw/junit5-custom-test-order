@@ -23,6 +23,6 @@ class CustomOrder : MethodOrderer {
 
     private val config = listOf(
         "E", "D", "C", "B", "A",
-        "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"
+        "One", "Four", "Eight", "Zero", "Two", "Three", "Five", "Six", "Seven", "Nine"
     )
 }

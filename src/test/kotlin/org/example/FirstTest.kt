@@ -1,78 +1,68 @@
 package org.example
 
-import org.junit.jupiter.api.AfterAll
-import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.fail
 
 internal class FirstTest {
+    private val failTests = listOf("testOne", "testFour", "testEight")
+
     @Test
     fun testZero() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(0)
-        buf.add(0)
     }
 
     @Test
     fun testOne() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(1)
-        buf.add(1)
     }
 
     @Test
     fun testTwo() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(2)
-        buf.add(2)
     }
 
     @Test
     fun testThree() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(3)
-        buf.add(3)
     }
 
     @Test
     fun testFour() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(4)
-        buf.add(4)
     }
 
     @Test
     fun testFive() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(5)
-        buf.add(5)
     }
 
     @Test
     fun testSix() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(6)
-        buf.add(6)
     }
 
     @Test
     fun testSeven() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(7)
-        buf.add(7)
     }
 
     @Test
     fun testEight() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(8)
-        buf.add(8)
     }
 
     @Test
     fun testNine() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println(9)
-        buf.add(9)
-    }
-
-    companion object {
-        private val buf = mutableListOf<Int>()
-
-        @AfterAll
-        @JvmStatic
-        fun assertOrder() {
-            val expected = 0..9
-            assertEquals(expected.toList(), buf)
-        }
     }
 }

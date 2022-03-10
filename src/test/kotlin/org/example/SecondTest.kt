@@ -1,48 +1,38 @@
 package org.example
 
-import org.junit.jupiter.api.AfterAll
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.fail
 
 internal class SecondTest {
+    private val failTests = listOf("testE", "testD", "testC")
+
     @Test
     fun testA() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println("a")
-        buf.append("a")
     }
 
     @Test
     fun testB() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println("b")
-        buf.append("b")
     }
 
     @Test
     fun testC() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println("c")
-        buf.append("c")
     }
 
     @Test
     fun testD() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println("d")
-        buf.append("d")
     }
 
     @Test
     fun testE() {
+        if (failTests.contains(object {}.javaClass.enclosingMethod.name)) fail("(")
         println("e")
-        buf.append("e")
-    }
-
-    companion object {
-        private val buf = StringBuffer()
-
-        @AfterAll
-        @JvmStatic
-        fun assertOrder() {
-            val expected = ('a'..'e').reversed().toList().joinToString(separator = "")
-            Assertions.assertEquals(expected, buf.toString())
-        }
     }
 }
