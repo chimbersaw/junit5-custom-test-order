@@ -2,6 +2,7 @@ package org.example
 
 import org.junit.jupiter.api.Test
 
+// sum = 2.889
 internal class TestThree {
     @Test fun testA() = failWithProb(0.239)
     @Test fun testB() = failWithProb(0.65)
