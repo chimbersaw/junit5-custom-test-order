@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.fail
 
 internal class SecondTest {
-    private val failTests = listOf("testE", "testD", "testC")
+    private val failTests = listOf("testE", "testD", "testC", "testB")
 
     @Test
     fun testA() {
