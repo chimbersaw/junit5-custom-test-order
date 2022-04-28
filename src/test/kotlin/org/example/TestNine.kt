@@ -10,3 +10,4 @@ internal class TestNine {
     @Test fun testD() = failWithProb(1.0)
     @Test fun testE() = failWithProb(1.0)
 }
+
