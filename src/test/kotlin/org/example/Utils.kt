@@ -6,3 +6,4 @@ import kotlin.random.Random
 fun failWithProb(prob: Double) {
     if (Random.nextDouble() < prob) fail("")
 }
+
