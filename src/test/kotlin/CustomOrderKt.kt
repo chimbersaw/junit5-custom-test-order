@@ -15,7 +15,7 @@ fun String.toRatioValue(): Double? {
     } else null
 }
 
-class CustomOrder : MethodOrderer, ClassOrderer {
+class CustomOrderKt : MethodOrderer, ClassOrderer {
     private val config = this::class.java.getResourceAsStream(TEST_PRIORITIZATION_CONFIG)
 
     private val successProbability = config?.bufferedReader()?.readLines()?.associate {
